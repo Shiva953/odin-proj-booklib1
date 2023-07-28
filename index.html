@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Library</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body class="bg">
+      <h1 class="main_heading">The Book Library</h1>
+    <button class="adding_book" onclick=openForm()>Add A Book</button>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>New Book</h1>
+          <div class="input">
+          <input id="title" type="text" placeholder="Title" name="title" class="input-field" required>
+          <label for="title" class="input-label">Title</label>
+          </div>
+          <div class="input">
+          <input id="author" type="text" placeholder="Author" name="author" class="input-field" required>
+          <label for="author" class="input-label">Author</label>
+        </div>
+        <div class="input">
+          <input id="pages" type="number" placeholder="Pages" name="author" class="input-field" required>
+          <label for="pages" class="input-label">Pages</label>
+        </div>
+          
+          <label for="status">Read?</label>
+          <input type="checkbox" id="status" name="interest" value="read" />
+
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </div>
+    <div id="container">
+        <!-- <div class="book_card">
+            <h2 class="title">Book Title</h2>
+            <p class="author">Author Name</p>
+            <p class="pages">877</p>
+            <button class="status" type="button">Read/Not Read</button>
+        </div> -->
+    </div>
+    </body>
+    <script src="index.js"></script>
+</html>

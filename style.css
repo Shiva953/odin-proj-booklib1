@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+.bg{
+  background-color: #70cbce;
+}
+
+h1{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.main_heading{
+  background: #ffffff;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 70px;
+}
+
+#container{
+  width:100vw;
+  display: flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  overflow-y:auto;
+  margin-top: 0.6rem;
+}
+
+.adding_book{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  appearance: button;
+  background-color: #1652F0;
+  border: 1px solid #1652F0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Graphik,-apple-system,system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  overflow: visible;
+  padding: 12px 16px 12px 12px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  margin: 0 auto;
+}
+.adding_book:hover{
+  background-color: #2e60e0;
+}
+
+.book_card {
+    /* width: 300px;
+    height: 200px;
+    padding: 20px;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; */
+    margin:0 30px 10px 10px;
+    height: 300px;
+    width:300px;
+    background-color:#fbf9ef;
+    border:5px solid black;
+    border-radius: 12px;
+    overflow-y: scroll;
+  }
+  
+  .title {
+    text-align: center;
+    justify-content: center;
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .author {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 4px;
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  .pages {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  .status {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 0 auto;
+    /* font-family: 'Work Sans', sans-serif; */
+  }
+  .status:hover {
+    background-color: #63ff9c;
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  }
+
+  .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    /* display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9; */
+    font-family: 'DM Sans', sans-serif;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    width: 100%;
+    max-width: 325px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(#000000, .5);
+    padding: .75rem;
+    z-index: 9;
+    border: black;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 280px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=number] {
+    font-family: 'DM Sans', sans-serif;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=number]:focus {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    /* background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8; */
+    font-family: 'DM Sans', sans-serif;
+    font: inherit;
+    font-size: 1.25rem;
+    padding: 1em;
+    width: 100%;
+    font-weight: 500;
+    background-color: #6658d3;
+    border-radius: 6px;
+    color: #FFF;
+    border: 0;
+    &:focus {
+    outline: 0;
+	}
+  }
+  
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .input {
+    display: flex;
+    font-family: 'DM Sans', sans-serif;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 1.5rem;
+    &+.input {
+      margin-top: 1.5rem;
+    }
+  }
+  
+  .input-label {
+    font-family: 'DM Sans', sans-serif;
+    color: #8597a3;
+    position: absolute;
+    top: 1.5rem;
+    transition: .25s ease;
+  }
+  
+  .input-field {
+    font-family: 'DM Sans', sans-serif;
+    border: 0;
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 2px solid #eee; 
+    font: inherit;
+    font-size: 1.125rem;
+    padding: .25rem 0;
+    &:focus, &:valid {
+      outline: 0;
+      border-bottom-color: #6658d3;
+      &+.input-label {
+        color: #6658d3;
+        transform: translateY(-1.5rem);
+      }
+    }
+  }
